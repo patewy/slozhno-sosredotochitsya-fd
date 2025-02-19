@@ -50,7 +50,7 @@
   background-color: transparent;
   border: none;
   box-shadow: none;
-  color: var(--accent-color);
+  color: var(--decorated-color);
   text-transform: lowercase;
   padding-block: 1.5px;
   padding-inline: 13px;
@@ -59,7 +59,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px solid var(--accent-color); 
+  outline: 1px solid var(--decorated-color); 
 }
 
 .header__theme-menu-button:hover {
@@ -72,7 +72,7 @@
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-block-end: 1px solid var(--accent-color) ;
+  border-block-end: 1px solid var(--decorated-color) ;
 }
 
 .decorated-zone::before {
@@ -80,8 +80,8 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid var(--accent-color) ;
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--decorated-color) ;
+  border-inline-start: 1px solid var(--decorated-color);
   left: 10px;
   bottom: 10px;
 }
@@ -91,8 +91,8 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--decorated-color);
+  border-inline-end: 1px solid var(--decorated-color);
   right: 10px;
   top: 10px;
 }
@@ -270,6 +270,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     margin-block-end: 60px;
+    grid-auto-rows: auto; 
   }
   
   .section__title {
@@ -360,19 +361,19 @@
   
   .section__difficulty__concentrating .section__title {
     inline-size: 41vh;
-  }
+  }  
 
   .section__decreased__concentration {
     column-gap: 20px;
   }
+  
+  .section__decreased__concentration .section__title {
+    inline-size: 41vh;
+    grid-column: 1 / -1;
+  }
 
   .section__decreased__concentration .article {
     grid-column: initial;
-    grid-row: 2/3;
-  }
-
-  .section__decreased__concentration .section__title {
-    grid-row: 1/2;
   }
 
   .section__method__to__concentrate .section__title {
